@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SeatView">
+        <attr name="imageResource" format="reference"/>
+        <attr format="boolean" name="state_required_payment_type_1"/>
+        <attr format="boolean" name="state_required_payment_type_2"/>
+    </declare-styleable>
+</resources>

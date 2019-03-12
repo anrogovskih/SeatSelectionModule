@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#dedede</color>
+    <color name="colorAccent">#ba0c2f</color>
+    <color name="colorAccentPressed">#FF1342</color>
+
+    <color name="colorSeatLightBlue">#691DA6BE</color>
+    <color name="colorSeatDarkBlue">#2579B4</color>
+
+    <color name="colorTextDark">#333333</color>
+    <color name="colorTextGray">#BBBBBB</color>
+
+</resources>
