@@ -3,4 +3,7 @@
     <dimen name="seat_view_size">36dp</dimen>
     <dimen name="seat_view_margin">8dp</dimen>
     <dimen name="seat_view_icon_margin_bottom">-2dp</dimen>
+    <dimen name="seat_selection_header_height">170dp</dimen>
+    <dimen name="seat_selection_legend_image_size">12dp</dimen>
+
 </resources>

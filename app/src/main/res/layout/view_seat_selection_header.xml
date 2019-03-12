@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/seat_selection_header_height">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextAppearanceRegular17"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/view_seat_selection_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/seat_view_size"
+        android:layout_height="@dimen/seat_view_size"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorAccent"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/ic_seat_selected" />
+
+    <TextView
+        android:id="@+id/seatNumber"
+        style="@style/TextAppearanceLight27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:text="5A" />
+
+    <TextView
+        android:id="@+id/priceTV"
+        style="@style/TextAppearanceLight27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/seatNumber"
+        app:layout_constraintEnd_toStartOf="@+id/currencyTV"
+        tools:text="+ 999" />
+
+    <TextView
+        android:id="@+id/currencyTV"
+        style="@style/TextAppearanceLight16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="18dp"
+        android:text="₽"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/priceTV" />
+
+    <View
+        android:id="@+id/upperDividerLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/colorTextGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <View
+        android:id="@+id/lowerDividerLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="42dp"
+        android:background="@color/colorTextGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upperDividerLine" />
+
+    <LinearLayout
+        android:id="@+id/legend1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lowerDividerLine"
+        app:layout_constraintEnd_toStartOf="@+id/legend2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/upperDividerLine">
+
+        <ImageView
+            android:layout_width="@dimen/seat_selection_legend_image_size"
+            android:layout_height="@dimen/seat_selection_legend_image_size"
+            app:srcCompat="@drawable/bg_accent_circle" />
+
+        <TextView
+            style="@style/TextAppearanceLight13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/view_seat_selection_legend_selected" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/legend2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lowerDividerLine"
+        app:layout_constraintEnd_toStartOf="@+id/legend3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/legend1"
+        app:layout_constraintTop_toTopOf="@+id/upperDividerLine">
+
+        <ImageView
+            android:layout_width="@dimen/seat_selection_legend_image_size"
+            android:layout_height="@dimen/seat_selection_legend_image_size"
+            app:srcCompat="@drawable/bg_circle_with_accent_frame" />
+
+        <TextView
+            style="@style/TextAppearanceLight13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/view_seat_selection_legend_vacant" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/legend3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lowerDividerLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/legend2"
+        app:layout_constraintTop_toTopOf="@+id/upperDividerLine">
+
+        <ImageView
+            android:layout_width="@dimen/seat_selection_legend_image_size"
+            android:layout_height="@dimen/seat_selection_legend_image_size"
+            android:rotation="90"
+            app:srcCompat="@drawable/bg_circle_splitted" />
+
+        <TextView
+            style="@style/TextAppearanceLight13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/view_seat_selection_legend_require_payment" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
